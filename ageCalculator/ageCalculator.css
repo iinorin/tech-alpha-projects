@@ -49,3 +49,21 @@ button {
     margin-top: 20px;
     font-size: 18px;
 }
+
+#age-group {
+    margin-top: 20px; /* Add some space between the container and the age group message */
+    text-align: center; 
+    font-size: 18px; 
+    color: #333; 
+}
+
+/* CSS styles for the zodiac sign display */
+#zodiac-sign {
+    margin-top: 20px; /* Add some space between the age group and the zodiac sign */
+    text-align: center; 
+    font-size: 18px;
+    color: #fff; 
+    background-color: #007BFF; /* Set background color */
+    padding: 10px;
+    border-radius: 5px; /* Add border radius */
+}
