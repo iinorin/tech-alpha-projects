@@ -53,3 +53,28 @@ function getZodiacSign(dob) {
     return zodiacSigns[signIndex];
 }
 
+// Function to calculate the remaining time until the user's next birthday
+function calculateNextBirthday() {
+    const dob = new Date(document.getElementById("dob").value);
+    const today = new Date();
+    const nextBirthday = new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
+
+    if (today > nextBirthday) {
+        nextBirthday.setFullYear(nextBirthday.getFullYear() + 1); // Increment year if the birthday has passed for this year
+    }
+
+    const timeUntilNextBirthday = nextBirthday - today;
+    const days = Math.floor(timeUntilNextBirthday / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeUntilNextBirthday % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeUntilNextBirthday % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeUntilNextBirthday % (1000 * 60)) / 1000);
+
+    // Display the countdown timer
+    document.getElementById("countdown-timer").innerHTML = "<p>Time until your next birthday: " + days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds</p>";
+
+    // Update the countdown timer every second
+    setTimeout(calculateNextBirthday, 1000);
+}
+
+// Call the calculateNextBirthday function when the page loads
+calculateNextBirthday();

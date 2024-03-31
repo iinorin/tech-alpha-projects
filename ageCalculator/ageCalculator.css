@@ -67,3 +67,10 @@ button {
     padding: 10px;
     border-radius: 5px; /* Add border radius */
 }
+
+#countdown-timer {
+    margin-top: 20px; /* Add some space between the zodiac sign and the countdown timer */
+    text-align: center; /* Center-align the text */
+    font-size: 18px; /* Set font size */
+    color: #333; /* Set text color */
+}
