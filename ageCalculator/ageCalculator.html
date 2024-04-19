@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age Calculator</title>
-    <link rel="stylesheet" type="text/css" href="ageCalculator.css">
+    <link rel="stylesheet" href="ageCalculator.css">
 </head>
 <body>
     <div class="container">
@@ -11,25 +13,13 @@
             <label for="dob">Date of Birth:</label>
             <input type="date" id="dob" name="dob">
             <button type="button" onclick="calculateAge()">Calculate Age</button>
-            <button type="reset">Reset</button> <!-- New reset button -->
+            <button type="reset">Reset</button>
         </form>
-        <div id="result">
-            <p>Your age is: <span id="age"></span></p>
-        </div>
+        <div id="result"></div>
+        <div id="age-group"></div>
+        <div id="zodiac-sign"></div>
+        <div id="countdown-timer"></div>
     </div>
-
-    <div id="age-group">
-        <!-- Message will be displayed here -->
-    </div>
-
-    <div id="zodiac-sign">
-        <!-- Zodiac sign will be displayed here -->
-    </div>
-
-    <div id="countdown-timer">
-        <!-- Countdown timer will be displayed here -->
-    </div>
-
     <script src="ageCalculator.js"></script>
 </body>
 </html>
